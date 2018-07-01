@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyToolbar</string>
+    <string name="content">内容界面</string>
+    <string name="close">侧滑界面，点击回收侧滑</string>
+</resources>
