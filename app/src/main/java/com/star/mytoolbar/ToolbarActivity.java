@@ -1,7 +1,11 @@
 package com.star.mytoolbar;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
@@ -42,6 +46,15 @@ public class ToolbarActivity extends AppCompatActivity {
             }
 
             return true;
+        });
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bitmap);
+
+        Palette.from(bitmap).generate(palette -> {
+
+            Palette.Swatch swatch = palette.getVibrantSwatch();
+
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(swatch.getRgb()));
         });
     }
 
