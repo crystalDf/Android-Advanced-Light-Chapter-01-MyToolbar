@@ -29,7 +29,7 @@ public class ToolbarActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_launcher_foreground);
+        getSupportActionBar().setLogo(R.drawable.bitmap);
 
         mToolbar.setOnMenuItemClickListener(item -> {
 
